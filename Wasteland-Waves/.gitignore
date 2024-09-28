@@ -23,6 +23,7 @@
 **/Data/**/*.mp3
 *.dll
 *.pdb
+.idea/
 
 *.suo
 *.user
