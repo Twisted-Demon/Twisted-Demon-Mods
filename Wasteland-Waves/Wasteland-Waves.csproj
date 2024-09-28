@@ -9,14 +9,16 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>false</DebugSymbols>
     <DebugType>none</DebugType>
-    <OutputPath>$(MSBuildProjectDirectory)\</OutputPath>
-    <AssemblyName>Wasteland-Waves</AssemblyName>
-    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
-    <GenerateDependencyFile>false</GenerateDependencyFile>
+    
   </PropertyGroup>
 
-
+<PropertyGroup>
+  <OutputPath>$(MSBuildProjectDirectory)\bin\</OutputPath>
+  <AssemblyName>Wasteland-Waves</AssemblyName>
+  <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+  <GenerateDependencyFile>false</GenerateDependencyFile>
+</PropertyGroup>
 
   <ItemGroup>
     <Reference Include="0Harmony">
