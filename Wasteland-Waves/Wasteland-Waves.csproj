@@ -9,7 +9,14 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>false</DebugSymbols>
     <DebugType>none</DebugType>
+    <OutputPath>$(MSBuildProjectDirectory)\</OutputPath>
+    <AssemblyName>Wasteland-Waves</AssemblyName>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
   </PropertyGroup>
+
+
 
   <ItemGroup>
     <Reference Include="0Harmony">
@@ -65,9 +72,4 @@
       <Private>false</Private>
     </Reference>
   </ItemGroup>
-
-  <ItemGroup>
-    <Compile Remove="Harmony\XUiC_InGameHUDPatches.cs" />
-  </ItemGroup>
-
 </Project>
