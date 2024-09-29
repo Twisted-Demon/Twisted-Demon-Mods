@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <Name value="Wayfinder"/>
+    <DisplayName value="Wayfinder"/>
+    <Version value="1.0"/>
+    <Description value="Adds a minimap to your UI"/>
+    <Author value="Sondirn"/>
+</xml>
