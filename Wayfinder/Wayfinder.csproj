@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <RootNamespace>Wasteland_Waves</RootNamespace>
     <LangVersion>10</LangVersion>
   </PropertyGroup>
 
@@ -14,7 +13,6 @@
 
   <PropertyGroup>
     <OutputPath>$(MSBuildProjectDirectory)\bin\</OutputPath>
-    <AssemblyName>Wasteland-Waves</AssemblyName>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     <GenerateDependencyFile>false</GenerateDependencyFile>
@@ -32,6 +30,9 @@
     <Reference Include="LogLibrary">
       <HintPath>..\..\7DaysToDie_Data\Managed\LogLibrary.dll</HintPath>
       <Private>false</Private>
+    </Reference>
+    <Reference Include="Quartz">
+      <HintPath>..\0-Quartz\Quartz.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ResourceManager">
       <HintPath>..\..\7DaysToDie_Data\Managed\Unity.ResourceManager.dll</HintPath>

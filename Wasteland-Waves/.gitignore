@@ -24,6 +24,7 @@
 *.dll
 *.pdb
 .idea/
+Data/
 
 *.suo
 *.user

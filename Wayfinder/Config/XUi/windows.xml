@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Quartz name="XUi/windows.xml">
+    <append xpath="/windows">
+        <window depth="5" name="windowQuartzMinimap">
+
+            <!-- Non Masked Minimap Example -->
+            <panel name="mapView" disableautobackground="true" pos="-500,309" depth="1" controller="Quartz.MiniMap, Quartz" forceicontextoff="false" iconsize="50" iconscalemin="10" iconscalemax="100" zoomscalesteps="2">
+                <maskedtexture name="mapViewTexture" depth="2" width="300" height="300" material="Materials/MaskableMainmap" mask="@modfolder(Wayfinder)://Textures/circle_mask_white.png"/>
+                <maskedpanel name="clippingPanel" depth="4" width="300" height="300" mask="@modfolder(Wayfinder)://Textures/circle_mask_white.png" disableautobackground="true" createuipanel="true" clipping="SoftClip" clippingsoftness="4,4" clippingsize="300,300" clippingcenter="150,-150"/>
+            </panel>
+            
+        </window>
+    </append>
+
+</Quartz>
