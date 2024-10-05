@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using UniLinq;
 using UnityEngine;
 using UnityEngine.Networking;
 using Wasteland_Waves.Source.NetPackages;
@@ -173,8 +174,25 @@ public class RadioStation : MonoBehaviour
         Log.Out("Station: {0} - Current Song Finished, Starting New Song", name);
             
         //shuffle if we are out of songs
-        if(_songQueue.Count == 0)
+        if (_songQueue.Count <= 1)
+        {
+            _songQueue.TryDequeue(out var lastSong);
             ShuffleQueue();
+
+            if (!string.IsNullOrEmpty(lastSong))
+            {
+                var tempQueue = new List<string> { lastSong };
+                var oldQueue = _songQueue.ToList();
+                oldQueue.Remove(lastSong);
+                
+                tempQueue.AddRange(oldQueue);
+                
+                _songQueue.Clear();
+                
+                foreach (var song in tempQueue)
+                    _songQueue.Enqueue(song);
+            }
+        }
         
         //set the current song
         _currentSongName = _songQueue.Dequeue();

@@ -38,7 +38,7 @@ public class NetPackageVehicleRadioRequestMute : NetPackage
         var vehicleRadio = vehicleEntity.GetComponent<VehicleRadioComponent>();
 
         //update locally
-        vehicleRadio?.SetMute(true);
+        vehicleRadio?.SetMute(_isMuted);
         
         //send to other clients
         var package = NetPackageManager.GetPackage<NetPackageVehicleRadioSetMute>()
